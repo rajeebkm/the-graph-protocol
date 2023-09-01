@@ -6,7 +6,9 @@ function App() {
   const [tokens, setTokens] = useState([]);
   const [owner, setOwner] = useState();
 
-  const queryURL = `https://gateway.thegraph.com/api/[graph-key]/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7`;
+  const queryURL = `https://gateway.thegraph.com/api/${
+    import.meta.env.VITE_GRAPH_KEY
+  }/subgraphs/id/ELUcwgpm14LKPLrBRuVvPvNKHQ9HvwmtKgKSH6123cr7`;
   const query = `{
     tokens(first: 5) {
       id
